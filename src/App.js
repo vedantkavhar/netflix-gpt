@@ -1,13 +1,8 @@
-
-import './App.css';
-
+ 
+import Body from './Components/Body';
 function App() {
   return (
-    <div className="App">    
-        <p className='border border-blue-500 text-green-400 text-xl'>
-          Helo World!
-        </p>
-    </div>
+    <Body/>
   );
 }
 

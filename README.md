@@ -71,7 +71,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 
 
-## create from scratch
-- in terminal write = cd Desktop
-- npx create-react-app netflix-gpt       (proj name)
-- adding tailwind for create react app
+
+
+## structure
+#### landing page
+- signup auth(hero)
+- features ,faqs , social,copyrights
+
+#### after sign in auth
