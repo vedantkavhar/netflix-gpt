@@ -47,8 +47,16 @@ reemm passprop w/o {}  becauease it is hook , for componenrt to pass props use {
 - main container >> first container ,secondary container
 - get trailer from yt share,embed ,autoplay ,mute
 - add title as gradient ,buttons
-
-
+- build secondary container
+- movielist, moviecards fetch from store for each category using custom hook
+- make moviecards dynamic card for whole list shocwn using its id, poster_path from api
+- make child container relative using -margintop ,above first container 
+- ![alt text](./bg.png)
+- basically pass props from secondary containeer ,accept in movielist , use them in movielist , get poster path and pass it as a prop to moviecard 
+- use custom hooks for to put api data to our store for popular,top rated , upcoming movies 
+- and use this store data in secondary container, for movielist
+- usePopularMovies, usetopratedmovies,useupcomingmovies hooks
+  
  - fetch movies from tmdb(api stable)
 
 - remove react.stricmode form  main file so that everyting just run ones due to strict mode everutiing run twice  but it will not consider in production build ,,it is good

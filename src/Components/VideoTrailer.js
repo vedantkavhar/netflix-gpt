@@ -8,7 +8,7 @@ export const VideoTrailer = ({movieId}) => {
     // to fetch its key from store ,subscribe to store, use selector 
     const trailerVideo = useSelector(store => store.movies?.trailerVideo);
     
-    useMovieTrailer(movieId);
+    useMovieTrailer(movieId)
     
 
   return (
@@ -16,9 +16,8 @@ export const VideoTrailer = ({movieId}) => {
     <iframe className=" w-screen aspect-video"
     src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?&autoplay=1&mute=1"} 
     title="YouTube video player"
-
     ></iframe>
-    <h1>yt video</h1>
+    
     </div>
   )
 
