@@ -5,14 +5,15 @@ import { checkValidate } from '../Utils/Validate';
 import {  createUserWithEmailAndPassword } from "firebase/auth";
 import {auth} from "../Utils/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
+
 import { updateProfile } from "firebase/auth";
 import { useDispatch } from "react-redux";
 import { addUser } from "../Utils/UserSlice";
+import { LOGO, USER_AVATAR } from '../Utils/Constants';
 
 
 const Login = () => {
-  const navigate=useNavigate();
+
   const [signinform ,setsigninform] = useState(true);
 
   //initially no err,if error then show it
@@ -48,7 +49,7 @@ const Login = () => {
         // console.log(user);
         // ...
         updateProfile(user, {
-          displayName: name.current.value , photoURL: "https://avatars.githubusercontent.com/u/108593325?v=4"
+          displayName: name.current.value , photoURL: USER_AVATAR
         }).then(() => {
           // Profile updated!
           // ...
@@ -59,8 +60,7 @@ const Login = () => {
                 email:email,
                 displayName:displayName,
                 photoURL:photoURL}));
-          navigate("/browse");
-
+         
         }).catch((error) => {
           // An error occurred
           // ...
@@ -81,7 +81,7 @@ const Login = () => {
     // Signed in 
       const user = userCredential.user;
       console.log(user);
-      navigate("/browse");
+      
       // ...
     })
     .catch((error) => {
@@ -108,7 +108,7 @@ const Login = () => {
     <div>
         <Header/>
         <div className='absolute'>
-          <img src="https://assets.nflxext.com/ffe/siteui/vlv3/8728e059-7686-4d2d-a67a-84872bd71025/e90516bd-6925-4341-a6cf-0b9f3d0c140a/IN-en-20240708-POP_SIGNUP_TWO_WEEKS-perspective_WEB_34324b52-d094-482b-8c2a-708dc64c9065_medium.jpg" alt="bg" />
+          <img src={LOGO} alt="bg" />
          </div>
           
          <form onSubmit={(e)=>e.preventDefault() } className= "absolute bg-black opacity-80 w-3/12 mx-auto my-36 left-0 right-0 rounded-lg  text-white px-14 py-10 ">

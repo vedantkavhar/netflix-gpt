@@ -1,0 +1,27 @@
+import React from 'react';
+import { useSelector } from 'react-redux';
+import useMovieTrailer from "../hooks/useMovieTrailer";
+
+
+export const VideoTrailer = ({movieId}) => {
+    // store trailer in reducx store and fetch its key from storw 
+    // to fetch its key from store ,subscribe to store, use selector 
+    const trailerVideo = useSelector(store => store.movies?.trailerVideo);
+    
+    useMovieTrailer(movieId);
+    
+
+  return (
+    <div className="w-screen">
+    <iframe className=" w-screen aspect-video"
+    src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?&autoplay=1&mute=1"} 
+    title="YouTube video player"
+
+    ></iframe>
+    <h1>yt video</h1>
+    </div>
+  )
+
+}
+
+export default VideoTrailer;
