@@ -58,5 +58,15 @@ reemm passprop w/o {}  becauease it is hook , for componenrt to pass props use {
 - usePopularMovies, usetopratedmovies,useupcomingmovies hooks
 - Gan Gan Ganaat Bote
  - fetch movies from tmdb(api stable)
+ - buling search gpt 
+ - builded search comp , build togglesearchview sllice when user click on search then diff page open 
+ ##### multi language
+ - multi languages searchbar(langguageconstant)
+ - multi language pages
+ -  make configslice default lang en ,add to appstore
+ -  add onchange handlievent e dispatch e.target.value ( have store the selected language add it tp store)
+ - access in search bar which lang in store currently an show data in that langg using useselecotor ,, lang[langKey].search/placeholder
+ - show langopt only when in searh page again in headeeer read from store if showsearch true or false then showlang && langopt
+
 
 - remove react.stricmode form  main file so that everyting just run ones due to strict mode everutiing run twice  but it will not consider in production build ,,it is good

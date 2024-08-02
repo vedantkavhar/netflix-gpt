@@ -1,4 +1,5 @@
 import React from 'react';
+import 'remixicon/fonts/remixicon.css';
 
 const VideoTitle = ({ title, overview }) => {
   return (
@@ -7,8 +8,8 @@ const VideoTitle = ({ title, overview }) => {
         <p className='text-xl w-1/2 py-4'>{overview}</p>
 
         <div className=''>
-            <button className="bg-white text-black rounded-lg text-xl px-12 p-2  hover:bg-opacity-60 "  > Play</button>
-            <button className="bg-gray-500 text-white rounded-lg text-xl px-12 p-2 hover:bg-opacity-60 mx-3"> More info</button>
+            <button className="bg-white text-black rounded-lg text-xl px-12 p-2  hover:bg-opacity-60 "  > <i class="ri-play-large-fill"></i>Play</button>
+            <button className="bg-gray-500 text-white rounded-lg text-xl px-12 p-2 hover:bg-opacity-60 mx-3"> <i class="ri-information-line"></i>More info</button>
         </div>
     
     </div>
