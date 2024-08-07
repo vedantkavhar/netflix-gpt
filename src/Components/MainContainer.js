@@ -9,10 +9,10 @@ const MainContainer=()=>{
 
     // display atrailer in bg
     const mainMovie=movies[0];
-    // console.log(mainMovie);
+    console.log(mainMovie);
 
     // pass data of main moveie as props in that comp 
-    const { original_title, overview ,id}=mainMovie;
+    const { original_title, overview ,id} = mainMovie;
 
 
     return(

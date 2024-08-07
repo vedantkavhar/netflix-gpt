@@ -5,7 +5,7 @@ import {LOGO} from "../Utils/Constants"
 const GptSearch = () => {
   return (
     <div>
-      <div className='absolute -z-30'>
+      <div className='fixed -z-30'>
           <img src={LOGO} alt="bg" />
       </div>
       <GptSearchBar/>

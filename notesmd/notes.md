@@ -68,5 +68,28 @@ reemm passprop w/o {}  becauease it is hook , for componenrt to pass props use {
  - access in search bar which lang in store currently an show data in that langg using useselecotor ,, lang[langKey].search/placeholder
  - show langopt only when in searh page again in headeeer read from store if showsearch true or false then showlang && langopt
 
+##### Gpt search
+- get openapi key from  https://platform.openai.com/api-keys, keep it constant
+- go to npm openai >> install openai >> make openai.js copy boiler plate code anf replace with ur key 
+- in GPTsearch bar in form ad onsubmit(e) prevent default to prevent refresh after click btn >> eaxaople ![alt text](.//userefexample.png)
+######
+- using useRef to acceess search input 
+- step 1;decalre use ref(const varname=useRef(null))  
+-  step 2: in input add ref (ref={varname})
+- step 3: use it anywhere using varname.current.value
+-  so here example ![alt text](.//userefexample.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - remove react.stricmode form  main file so that everyting just run ones due to strict mode everutiing run twice  but it will not consider in production build ,,it is good
