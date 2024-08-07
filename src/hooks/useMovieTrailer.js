@@ -15,10 +15,10 @@ const MovieTrailer=(movieId)=>{
         const vidlist= await fetch('https://api.themoviedb.org/3/movie/'+movieId+'/videos?language=en-US', API_OPTIONS)
 
         const json = await vidlist.json();
-        console.log(json);
+        // console.log(json);
         
         const filterTrailer = json.results.filter((vid) => vid.type ==="Trailer");
-        console.log(filterTrailer);
+        // console.log(filterTrailer);
         // if mulitple trailler 
         const orgTrailer= filterTrailer.length ? filterTrailer[0] : json.results[0];
         // console.log(orgTrailer);

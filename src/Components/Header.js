@@ -68,24 +68,24 @@ const Header = () => {
       dispatch(changeLanguage(e.target.value));
     }
   return (
-    <div className="absolute flex justify-between items-center  bg-gradient-to-b from-black z-10 w-screen ">
+    <div className="absolute flex flex-col md:flex-row justify-between items-center  bg-gradient-to-b from-black z-10 w-screen ">
     {/* logo */}
-        <div className=" imglogo w-56 h-10 ml-16 ">
+        <div className=" imglogo w-56 h-10  md:ml-16 ">
             <img src={LOGO_ORG} alt=''/>
         </div>
 
         {/*  lang,sign in btn  */}
         {/* only show when sign in  ,*/}
-        {user && <div className="pt-10 flex mx-16">
+        {user && <div className="pt-10  flex   mx-16">
           {showGptSearch &&
-            <select className='rounded-lg px-2 mx-1 bg-gray-700 text-white' onChange={handleLanguageChange} >
+            <select className='rounded-lg px-2  mx-1 bg-gray-700 text-white' onChange={handleLanguageChange} >
               {SUPPORTED_LANGUAGES.map((lang )=> (<option key={lang.identifier} value={lang.identifier}>{lang.name}</option>))} 
             </select>
           }
 
-            <button className="bg-purple-500 text-white px-2 h-7 rounded-lg font-bold" onClick={handletoggleclick}>{ showGptSearch ? "Homepage" :"GPT Search"}</button>
-            <img src={user?.photoURL}  className="w-9  mx-1 rounded-lg h-7" alt="user img" />
-            <button className="font-bold bg-red-500 text-white  rounded-lg px-2 h-7" onClick={handlesignout}>Sign out</button>
+            <button className=" bg-purple-500 text-white px-2  md:h-7 rounded-lg font-bold" onClick={handletoggleclick}>{ showGptSearch ? "Homepage" :"GPT Search"}</button>
+            <img src={user?.photoURL}  className="hidden md:block w-9  mx-1 rounded-lg md:h-7" alt="user img" />
+            <button className="font-bold bg-red-500 text-white  rounded-lg px-2  md:h-7" onClick={handlesignout}>Sign out</button>
         </div>}
     </div>
   );

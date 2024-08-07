@@ -79,12 +79,23 @@ reemm passprop w/o {}  becauease it is hook , for componenrt to pass props use {
 - step 3: use it anywhere using varname.current.value
 -  so here example ![alt text](.//userefexample.png)
 
+- gpt search api call
+- fetched gptmoviessuggestions from tmdb
+- created gptslice added data
+- reused movielist component to make moviesuggestions container
 
+### adding security using env file
+- added .env file to gitignore 
 
+### added memoization for optimization
 
+### making responsive
 
+default : mobile
+sm: tab
+md: desktop 
 
-
+- favicon and title changed
 
 
 
