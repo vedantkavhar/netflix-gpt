@@ -8,7 +8,7 @@ export const API_OPTIONS={
     method: 'GET',
     headers: {
       accept: 'application/json',
-      Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiNWRlMTczMThkYTNmZjRjNmE5YzIzM2Y5ZWJiODA1ZSIsIm5iZiI6MTcyMjE2NDUzNC45Mzg0NDIsInN1YiI6IjY2YTYyMTVmZmM3OGQwNTJiOTFmN2NjYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ._qTz9Nkqa4D9PVclqSMB-3kCFWVTYl10nZxdrYl--a8'
+      Authorization: 'Bearer '+process.env.REACT_APP_TMDB_API,
     },
   };
 
@@ -20,7 +20,8 @@ export const SUPPORTED_LANGUAGES=[{identifier:"english", name:"English"},
   {identifier:"spanish", name:"Spanish"}];
 
 
-  export const OPENAPI_KEY = "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";
+  export const OPENAPI_KEY = "sk-pro";
+  //my self disturb key (since uploaded to git accide)
 
 
   // + process.env.REACT_APP_TMDB_API,
